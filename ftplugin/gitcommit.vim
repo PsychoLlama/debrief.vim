@@ -1,1 +1,1 @@
-call debrief#Init()
+call debrief#ShowDiffPane()
