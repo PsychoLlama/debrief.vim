@@ -1,0 +1,15 @@
+debrief shows diffs while writing commit messages
+
+Author:   Jesse Gibson <JesseTheGibson@gmail.com>
+Homepage: https://github.com/PsychoLlama/debrief.vim
+License:  MIT
+Tags: *debrief.vim* *debrief*
+
+==============================================================================
+CONTENTS                                                           *debrief-toc*
+
+  1. TODO
+
+==============================================================================
+
+vim: ft=help:
