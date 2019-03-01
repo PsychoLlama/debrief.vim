@@ -20,7 +20,7 @@ func! s:GetDiffContent() abort
   return l:diff_lines
 endfunc
 
-func! debrief#ShowDiffPane() abort
+func! debrief#OpenDiffPane() abort
   " :edit runs the file again. Don't show two panes.
   if debrief#IsShowingDiffPane()
     return
@@ -68,10 +68,23 @@ func! debrief#IsShowingDiffPane() abort
   return debrief#FindDiffPane() isnot# v:null
 endfunc
 
+func! s:CloseBufferById(id) abort
+  execute a:id . 'bdelete'
+endfunc
+
+func! debrief#CloseDiffPane() abort
+  if !debrief#IsShowingDiffPane()
+    return
+  endif
+
+  let l:diff_buf_id = debrief#FindDiffPane().bufnr
+  call s:CloseBufferById(l:diff_buf_id)
+endfunc
+
 func! s:CloseDiffIfLastWindow() abort
   " There's only one buffer left and it's the diff.
   if len(s:GetActiveBufferList()) is# 1 && debrief#IsShowingDiffPane()
-    exit
+    quit
   endif
 endfunc
 
