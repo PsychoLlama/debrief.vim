@@ -1,15 +1,49 @@
-debrief shows diffs while writing commit messages
+*debrief* shows diffs while writing commit messages
 
 Author:   Jesse Gibson <JesseTheGibson@gmail.com>
 Homepage: https://github.com/PsychoLlama/debrief.vim
 License:  MIT
-Tags: *debrief.vim* *debrief*
+Tags: *debrief.vim*
 
 ==============================================================================
-CONTENTS                                                           *debrief-toc*
+CONTENTS                                                           |debrief-toc|
 
-  1. TODO
+  1. OVERVIEW                                                 |debrief-overview|
+  2. API                                                           |debrief-api|
 
 ==============================================================================
+OVERVIEW                                                      *debrief-overview*
 
+When vim opens a commit message, debrief.vim automatically shows a diff with
+your changes. That's pretty much it.
+
+==============================================================================
+API
+
+Debrief exposes a public API because why not.
+
+------------------------------------------------------------------------------
+Show the diff pane                                      *debrief#ShowDiffPane()*
+
+Doesn't take any arguments. Opens a diff pane in an optimal layout given the
+current window's dimensions. Has no effect if the diff pane is already open.
+>
+  call debrief#ShowDiffPane()
+
+------------------------------------------------------------------------------
+Check if the diff pane is showing                  *debrief#IsShowingDiffPane()*
+
+Returns either `v:true` or `v:false`.
+>
+  let s:is_showing_diff = debrief#IsShowingDiffPane()
+
+------------------------------------------------------------------------------
+Get the diff's buffer object                            *debrief#FindDiffPane()*
+
+Get the buffer object that renders the diff pane. The structure is the same as
+returned by |getbufinfo()|. Returns `null` if the buffer isn't showing.
+>
+  let s:diff_buffer = debrief#FindDiffPane()
+
+==============================================================================
 vim: ft=help:

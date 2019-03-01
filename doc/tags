@@ -1,0 +1,6 @@
+debrief	debrief.txt	/*debrief*
+debrief#FindDiffPane()	debrief.txt	/*debrief#FindDiffPane()*
+debrief#IsShowingDiffPane()	debrief.txt	/*debrief#IsShowingDiffPane()*
+debrief#ShowDiffPane()	debrief.txt	/*debrief#ShowDiffPane()*
+debrief-overview	debrief.txt	/*debrief-overview*
+debrief.vim	debrief.txt	/*debrief.vim*
