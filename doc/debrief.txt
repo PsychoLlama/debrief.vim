@@ -23,12 +23,19 @@ API
 Debrief exposes a public API because why not.
 
 ------------------------------------------------------------------------------
-Show the diff pane                                      *debrief#ShowDiffPane()*
+Show the diff pane                                      *debrief#OpenDiffPane()*
 
 Doesn't take any arguments. Opens a diff pane in an optimal layout given the
 current window's dimensions. Has no effect if the diff pane is already open.
 >
-  call debrief#ShowDiffPane()
+  call debrief#OpenDiffPane()
+
+------------------------------------------------------------------------------
+Hide the diff pane                                     *debrief#CloseDiffPane()*
+
+Closes the open diff pane. Has no effect if it isn't already open.
+>
+  call debrief#CloseDiffPane()
 
 ------------------------------------------------------------------------------
 Check if the diff pane is showing                  *debrief#IsShowingDiffPane()*
