@@ -1,6 +1,12 @@
 # debrief.vim
 Show diffs while writing commit messages.
 
+## Plugin Status
+:no_entry: UNMAINTAINED
+
+I like this workflow better than `git commit --verbose`, but the distinction
+isn't worth a plugin. I'm no longer using this myself.
+
 ## Details
 Whenever you start editing a commit message, a diff of your staged changes is
 shown on the right. I know, mind blowing.
